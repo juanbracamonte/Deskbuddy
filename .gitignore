@@ -1,0 +1,5 @@
+.pio
+.vscode
+tools
+_detect_ports.ps1
+_env_check.ps1

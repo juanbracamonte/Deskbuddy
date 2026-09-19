@@ -1,13 +1,8 @@
-//#define ILI9341_DRIVER
-#define ST7789_DRIVER
+#define ILI9341_2_DRIVER
 #define TFT_WIDTH 240
 #define TFT_HEIGHT 320
 
-
-//Had to change RGB Order
 #define TFT_RGB_ORDER TFT_BGR
-
-//
 
 #define TFT_MISO 12
 #define TFT_MOSI 13
@@ -19,15 +14,16 @@
 #define TFT_BL   21
 #define TFT_BACKLIGHT_ON HIGH
 
-// ---- Font loading ----
-#define LOAD_GLCD   // Font 1. Dette er den viktigste
-#define LOAD_FONT2  // Små tall/tekst
-#define LOAD_FONT4  // Medium
-#define LOAD_FONT6  // Stor
-#define LOAD_FONT7  // 7-segment
-#define LOAD_FONT8  // Ekstra stor
-#define LOAD_GFXFF  // FreeFonts
+#define USE_HSPI_PORT
 
-#define SPI_FREQUENCY  40000000
-// SPI clock frequency for touch controller
+#define LOAD_GLCD
+#define LOAD_FONT2
+#define LOAD_FONT4
+#define LOAD_FONT6
+#define LOAD_FONT7
+#define LOAD_FONT8
+#define LOAD_GFXFF
+
+#define SPI_FREQUENCY  27000000
+#define SPI_READ_FREQUENCY  20000000
 #define SPI_TOUCH_FREQUENCY  2500000
