@@ -755,7 +755,7 @@ static String formatDisplayTemp(float value) {
 }
 
 static String tempRangeText() {
-  return String(tr("Max:", "Max:")) + formatDisplayTemp(tempMaxC) + "  " + tr("Min:", "Min:") + formatDisplayTemp(tempMinC);
+  return formatDisplayTemp(tempMaxC) + "  " + formatDisplayTemp(tempMinC);
 }
 
 static String formatTempNumber(float value) {
@@ -769,7 +769,7 @@ static String minMaxValueText() {
 }
 
 static String minMaxDetailText() {
-  return String(tr("Min ", "Min ")) + formatDisplayTemp(tempMinC);
+  return formatDisplayTemp(tempMinC);
 }
 
 static const char* weekdayShort(int wday) {
@@ -1015,7 +1015,7 @@ static String focusHintText() {
   if (focusTimerFinished) return tr("Toca para reset", "Tap to reset");
   if (focusTimerPaused) return tr("En pausa", "Paused");
   if (focusTimerRunning) return String((focusDurationSec / 60UL)) + " min";
-  return tr("Toca para iniciar", "Tap to start");
+  return tr("Iniciar", "Start");
 }
 
 static String formatElapsedText(unsigned long totalSec) {
